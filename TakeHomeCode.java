@@ -9,13 +9,13 @@ public class TakeHomeCode {
             int end = Integer.parseInt(args[1]);
             AddNumbers adder = (a, b) -> {
                 int sum = 0;
-                for (int i = start; i <= end; i++) {
+                for (int i = a; i <= b; i++) {
                     sum += i;
                 }
                 return sum;
             };
-            int result = adder.add(1, 5);
-            System.out.println("Sum of numbers from 1 to 5: " + result);
+            int result = adder.add(start, end);
+            System.out.println("Sum of numbers from "+start+" to "+end+": " + result);
         }catch(NumberFormatException e)
         {
             System.out.println("Invalid input. Please provide two integers.");
